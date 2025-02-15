@@ -80,6 +80,8 @@ html:lang(ar) .lab-titles {
 
 // ------- Carousel -------
 .media_carousel {
+  @extend %d_flex_center;
+  gap: 24px;
   position: absolute;
   bottom: 83px;
   left: 50%;
@@ -87,6 +89,10 @@ html:lang(ar) .lab-titles {
   height: 40px;
   width: 130px;
   z-index: 2;
+  .next,
+  .prev {
+    cursor: pointer;
+  }
 }
 
 #carouselExample {
@@ -97,26 +103,17 @@ html:lang(ar) .lab-titles {
   bottom: 0;
   z-index: -1;
   height: 1024px;
+  img {
+    height: 1024px;
+    object-fit: cover;
+  }
 }
 @media (max-width: 991px) {
   #carouselExample {
     display: none;
   }
 }
-#carouselExample img {
-  height: 1024px;
-  object-fit: cover;
-}
-.media_carousel {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 24px;
-  .next,
-  .prev {
-    cursor: pointer;
-  }
-}
+
 html:lang(ar) .media_carousel {
   flex-direction: row-reverse;
 }
@@ -142,19 +139,20 @@ html[lang="ar"] .img-lang-ar {
   height: 90vh;
   flex-direction: column;
   position: relative;
+  h1 {
+    font-size: 52px;
+    text-transform: uppercase;
+    span {
+      display: inline-block;
+      margin-top: 14px;
+    }
+  }
+  p {
+    font-size: 18px;
+    font-weight: bold;
+  }
 }
-.hero-content h1 {
-  font-size: 52px;
-  text-transform: uppercase;
-}
-.hero-content h1 span {
-  display: inline-block;
-  margin-top: 14px;
-}
-.hero-content p {
-  font-size: 18px;
-  font-weight: bold;
-}
+
 html:lang(en) .hero-content {
   padding-left: 80px;
 }
@@ -176,10 +174,12 @@ html:lang(ar) .hero-content h1 {
     justify-content: center;
     align-items: center;
     text-align: center;
+    p {
+      font-size: 15px;
+      width: 84%;
+    }
   }
-  .hero-content p {
-    font-size: 15px;
-  }
+
   html:lang(ar) .hero-content {
     padding-right: 0;
   }

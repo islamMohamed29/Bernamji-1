@@ -14,15 +14,15 @@ html:lang(ar) .dropdown-item i {
   transform: rotate(180deg);
 }
 
-.dropdown-item.active,
-.dropdown-item:hover {
-  background-color: $background-light;
-  color: $text-color;
-}
 .dropdown-item {
   color: $text-color;
-}
-.dropdown-item i {
-  color: $green-color;
-  margin-right: 6px;
+  &.active,
+  &:hover {
+    background-color: $background-light;
+    color: $text-color;
+  }
+  i {
+    color: $green-color;
+    margin-right: 6px;
+  }
 }
