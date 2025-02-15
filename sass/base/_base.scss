@@ -1,0 +1,9 @@
+@use "../abstracts/variables" as *;
+
+body {
+  font-family: $font-primary;
+}
+
+.container-fluid {
+  padding: 0 !important;
+}

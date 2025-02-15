@@ -1,0 +1,32 @@
+@use "../abstracts/variables" as *;
+@use "../abstracts/extends" as *;
+.main_btn {
+  @extend %d_flex_center;
+  @extend %reset_border_outline;
+  margin-top: 36px;
+  width: 195px;
+  height: 56px;
+  border-radius: 60px;
+  background-color: $primary-color;
+  color: $white-color;
+  font-weight: bold;
+  transition: 0.3s ease;
+  &:hover {
+    background-color: $secondary-color;
+  }
+  .wrapper_btn {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 155px;
+    height: 32px;
+    text-transform: uppercase;
+    svg {
+      transform: rotate(180deg);
+    }
+  }
+}
+
+html:lang(ar) .main_btn .wrapper_btn svg {
+  transform: rotate(0);
+}
