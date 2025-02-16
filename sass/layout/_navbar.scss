@@ -3,6 +3,8 @@
 
 .navbar {
   padding: 30px 80px;
+  position: relative;
+  z-index: 2;
   .dropdown-toggle[aria-expanded="true"] i {
     transform: rotate(180deg);
   }

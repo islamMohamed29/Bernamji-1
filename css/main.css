@@ -172,7 +172,7 @@ html:lang(ar) .lab-titles {
   transform: translateX(-50%);
   height: 40px;
   width: 130px;
-  z-index: 2;
+  z-index: 10;
 }
 .media_carousel .next,
 .media_carousel .prev {
@@ -185,7 +185,6 @@ html:lang(ar) .lab-titles {
   left: 0;
   right: 0;
   bottom: 0;
-  z-index: -1;
   height: 1024px;
 }
 #carouselExample img {
@@ -218,9 +217,11 @@ html[lang=ar] .img-lang-ar {
   display: flex;
   justify-content: center;
   align-items: flex-start;
-  height: 90vh;
   flex-direction: column;
-  position: relative;
+  position: absolute;
+  top: 60%;
+  transform: translateY(-50%);
+  z-index: 5;
 }
 .hero-content h1 {
   font-size: 52px;
@@ -233,6 +234,7 @@ html[lang=ar] .img-lang-ar {
 .hero-content p {
   font-size: 18px;
   font-weight: bold;
+  width: 84%;
 }
 
 html:lang(en) .hero-content {
@@ -262,7 +264,7 @@ html:lang(ar) .hero-content h1 {
   }
   .hero-content p {
     font-size: 15px;
-    width: 84%;
+    width: 84% !important;
   }
   html:lang(ar) .hero-content {
     padding-right: 0;
@@ -280,6 +282,8 @@ html:lang(ar) .hero-content h1 {
 }
 .navbar {
   padding: 30px 80px;
+  position: relative;
+  z-index: 2;
 }
 .navbar .dropdown-toggle[aria-expanded=true] i {
   transform: rotate(180deg);

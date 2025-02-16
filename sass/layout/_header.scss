@@ -88,7 +88,7 @@ html:lang(ar) .lab-titles {
   transform: translateX(-50%);
   height: 40px;
   width: 130px;
-  z-index: 2;
+  z-index: 10;
   .next,
   .prev {
     cursor: pointer;
@@ -101,7 +101,7 @@ html:lang(ar) .lab-titles {
   left: 0;
   right: 0;
   bottom: 0;
-  z-index: -1;
+
   height: 1024px;
   img {
     height: 1024px;
@@ -136,9 +136,12 @@ html[lang="ar"] .img-lang-ar {
   display: flex;
   justify-content: center;
   align-items: flex-start;
-  height: 90vh;
+  // height: 90vh;
   flex-direction: column;
-  position: relative;
+  position: absolute;
+  top: 60%;
+  transform: translateY(-50%);
+  z-index: 5;
   h1 {
     font-size: 52px;
     text-transform: uppercase;
@@ -150,6 +153,7 @@ html[lang="ar"] .img-lang-ar {
   p {
     font-size: 18px;
     font-weight: bold;
+    width: 84%;
   }
 }
 
@@ -176,7 +180,7 @@ html:lang(ar) .hero-content h1 {
     text-align: center;
     p {
       font-size: 15px;
-      width: 84%;
+      width: 84% !important;
     }
   }
 
